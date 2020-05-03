@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:kullanici="clr-namespace:NotDefteriVeritabani.VeriModelleri"
+             mc:Ignorable="d"
+             x:Class="NotDefteriVeritabani.Sayfalar.KullaniciKaydiPage">
+    <!--
+    <ContentPage.BindingContext>
+        <kullanici:Kullanicilar/>
+    </ContentPage.BindingContext>
+    -->
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="Center"
+                     x:Name="kullaniciKaydiSL">
+            <StackLayout.BindingContext>
+                <kullanici:Kullanicilar/>
+            </StackLayout.BindingContext>
+            <Label x:Name="hataLabel"   FontSize="18"
+                   HorizontalTextAlignment="Center"/>
+            <Entry x:Name="emailEntry" 
+                   Text="{Binding Eposta}"
+                   Placeholder="Eposta adresinizi yazın"
+                   Keyboard="Email" TextChanged="EpostayiKontrolEt"/>
+            <Entry x:Name="emailDogrulaEntry" 
+                   Placeholder="Email adressinizi doğrulayın"
+                   Keyboard="Email" TextChanged="EpostayiKontrolEt"/>
+            <Entry x:Name="passwordEntry" Text="{Binding Parola}"
+                   Placeholder="Parolanızı yazın"
+                   IsPassword="True"/>
+            <Entry x:Name="passwordDogrulaEntry" 
+                   Placeholder="Parolanızı doğrulayın"
+                   IsPassword="True"/>
+            <Button x:Name="ozelGirisButton"
+                    Margin="0,10,0,0"
+                    Text="Kaydı Tamamla"   Clicked="KullaniciKaydet" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

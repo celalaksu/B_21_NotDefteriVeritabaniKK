@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="NotDefteriVeritabani.Sayfalar.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <StackLayout>
+                <Entry x:Name="emailEntry" 
+                   Placeholder="Eposta adresinizi girin"
+                   Keyboard="Email"/>
+                <Entry x:Name="passwordEntry" 
+                   Placeholder="Parolanızı girin"
+                   IsPassword="True"/>
+                <Button x:Name="ozelGirisButton"
+                    Margin="0,10,0,0"
+                    Text="Giriş Yap" Clicked="GirisYap"/>
+                <Button x:Name="kullaniciKayitButton"
+                    BackgroundColor="White"
+                    Text="Kayıt Ol"
+                    TextColor="Black"
+                    HorizontalOptions="End"  Clicked="KullaniciKayitButton_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
